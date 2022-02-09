@@ -12,30 +12,27 @@ package music.list;
 public abstract class Music {
     
     public String Title;
-    public int ID;
     public String Date;
     public float Duration;
     public String Gender;
-    public String Cover;
+    public String portada;
     public String Description;
 
-    public Music(String Title, int ID, String Date, float Duration, String Gender, String Cover, String Description) {
+    public Music(String Title, String Date, float Duration, String Gender, String Cover, String Description) {
         this.Title = Title;
-        this.ID = ID;
         this.Date = Date;
         this.Duration = Duration;
         this.Gender = Gender;
-        this.Cover = Cover;
+        this.portada = Cover;
         this.Description = Description;
     }
     
     public Music(){
         Title = "";
-        ID = 0;
         Date = "";
         Duration = 0;
         Gender = "";
-        Cover = "";
+        portada = "";
         Description = "";
     }
 
@@ -45,14 +42,6 @@ public abstract class Music {
 
     public void setTitle(String Title) {
         this.Title = Title;
-    }
-
-    public int getID() {
-        return ID;
-    }
-
-    public void setID(int ID) {
-        this.ID = ID;
     }
 
     public String getDate() {
@@ -80,11 +69,11 @@ public abstract class Music {
     }
 
     public String getCover() {
-        return Cover;
+        return portada;
     }
 
     public void setCover(String Cover) {
-        this.Cover = Cover;
+        this.portada = Cover;
     }
 
     public String getDescription() {
