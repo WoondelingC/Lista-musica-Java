@@ -87,6 +87,11 @@ public abstract class Music {
     public abstract void FilterGenre();
     
     public abstract void FilterYear();
+
+    @Override
+    public String toString() {
+        return "Music{" + "Title=" + Title + ", Date=" + Date + ", Duration=" + Duration + ", Gender=" + Gender + ", portada=" + portada + ", Description=" + Description + '}';
+    }
     
     
     
