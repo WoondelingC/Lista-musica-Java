@@ -9,16 +9,16 @@ package music.list;
  *
  * @author jonat
  */
-public class Arraylist extends Music implements IMusic {
+public class Album extends Music implements IMusic {
     static int musicCounter = 0;
     
     private int idMusic;
     //private String[] list = new Arraylist();
 
-    public Arraylist(String Title, String Date, float Duration, String Gender, String portada, String Description) {
+    public Album(String Title, String Date, float Duration, String Gender, String portada, String Description) {
         super(Title, Date, Duration, Gender, portada, Description);
         
-        this.idMusic = ++ Arraylist.musicCounter;
+        this.idMusic = ++ Album.musicCounter;
     }
 
 
