@@ -13,7 +13,7 @@ public class Album extends Music {
     private int idMusic;
     //private String[] list = new Arraylist();
 
-    public Album(String Title, String Date, float Duration, String Gender, String portada, String Description) {
+    public Album(String Title, int Date, int Duration, String Gender, String portada, String Description) {
         super(Title, Date, Duration, Gender, portada, Description);
         
         this.idMusic = ++ Album.musicCounter;
