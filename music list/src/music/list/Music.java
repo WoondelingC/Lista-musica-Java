@@ -9,13 +9,13 @@ import java.util.List;
 public abstract class Music {
     
     public String Title;
-    public String Date;
-    public float Duration;
+    public int Date;
+    public int Duration;
     public String Gender;
     public String portada;
     public String Description;
 
-    public Music(String Title, String Date, float Duration, String Gender, String Cover, String Description) {
+    public Music(String Title, int Date, int Duration, String Gender, String Cover, String Description) {
         this.Title = Title;
         this.Date = Date;
         this.Duration = Duration;
@@ -26,7 +26,7 @@ public abstract class Music {
     
     public Music(){
         Title = "";
-        Date = "";
+        Date = 0;
         Duration = 0;
         Gender = "";
         portada = "";
@@ -41,11 +41,11 @@ public abstract class Music {
         this.Title = Title;
     }
 
-    public String getDate() {
+    public int getDate() {
         return Date;
     }
 
-    public void setDate(String Date) {
+    public void setDate(int Date) {
         this.Date = Date;
     }
 
@@ -53,7 +53,7 @@ public abstract class Music {
         return Duration;
     }
 
-    public void setDuration(float Duration) {
+    public void setDuration(int Duration) {
         this.Duration = Duration;
     }
 
