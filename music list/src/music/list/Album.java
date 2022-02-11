@@ -1,15 +1,13 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package music.list;
+
+import java.util.List;
 
 /**
  *
  * @author jonat
  */
-public class Album extends Music implements IMusic {
+public class Album extends Music {
+    
     static int musicCounter = 0;
     
     private int idMusic;
@@ -21,30 +19,26 @@ public class Album extends Music implements IMusic {
         this.idMusic = ++ Album.musicCounter;
     }
 
+    
+    public String getTitle(){
+        return this.Title;
+    }
 
     public int getidMusic() {
         return idMusic;
     }    
     
-    
-    @Override
-    public void createPlaylist() {
-        
-    }
+   
 
     @Override
     public void sortList() {
         System.out.println("como vas");
     }
 
-    @Override
-    public void FilterGenre() {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
-    }
 
     @Override
-    public void FilterYear() {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    public void createPlaylist() {
+        
     }
     
 }

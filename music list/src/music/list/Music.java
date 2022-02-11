@@ -1,9 +1,6 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package music.list;
+
+import java.util.List;
 
 /**
  *
@@ -84,15 +81,15 @@ public abstract class Music {
         this.Description = Description;
     }
     
-    public abstract void FilterGenre();
+    public abstract void createPlaylist();
     
-    public abstract void FilterYear();
+    public abstract void sortList();
 
     @Override
     public String toString() {
-        return "Music{" + "Title=" + Title + ", Date=" + Date + ", Duration=" + Duration + ", Gender=" + Gender + ", portada=" + portada + ", Description=" + Description + '}';
+        return "Music{" + "Title=" + Title + ", Date=" + Date + ", Duration=" + 
+                Duration + ", Gender=" + Gender + ", portada=" + portada + 
+                ", Description=" + Description + '}';
     }
-    
-    
     
 }

@@ -4,14 +4,16 @@
  */
 package music.list;
 
+import java.util.List;
+
 /**
  *
  * @author Yorman Colina
  */
 public interface IMusic {
     
-    public void createPlaylist();
+    public List<Album> FilterGenre(Album[] lista, String genero);
     
-    public void sortList();
+    public List<Album> FilterYear(Album[] lista);
     
 }
