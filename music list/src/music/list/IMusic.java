@@ -14,6 +14,8 @@ public interface IMusic {
     
     public List<Album> FilterGenre(Album[] lista, String genero);
     
-    public List<Album> FilterYear(Album[] lista);
+    public List<Album> FilterYear(Album[] lista,int Date);
+    
+    public List<Album> FilterYearDuration(Album[] lista);
     
 }
