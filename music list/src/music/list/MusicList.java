@@ -76,7 +76,6 @@ public class MusicList {
     System.out.println(list);
 
 }
-    
 
 
     public static void main(String[] args) {
@@ -142,8 +141,10 @@ public class MusicList {
           }
           
           FilterMusic a = new FilterMusic();
-          
-          a.FilterYearDuration(Ve);
+          List<Album> LIstaFIltrada = a.FilterYearDuration(Ve);
+          for(int i =0; i<LIstaFIltrada.size();i++){
+              System.out.println(LIstaFIltrada.get(i).Date);
+          }
           
     }
 }
