@@ -1,2 +1,9 @@
 /music list/build/
 /music list/dist/
+.idea/misc.xml
+*.xml
+music list/nbproject/private/private.xml
+*.iml
+*.class
+*.java
+*.xml

@@ -70,6 +70,13 @@ public class MusicList {
 
     }
 
+    }  
+
+    System.out.println(list);
+
+}
+
+
     public static void main(String[] args) {
 
         Album music1 = new Album("Clasico de la provincia", 1993, 52, "Vallenato",
@@ -129,22 +136,20 @@ public class MusicList {
                              De cual año deseas ver los Albunes 
                              1984
                              1989
-                             1993
-                             1994
-                             1995
-                             2001
-                             2002
-                             2013
-                             2019""");        
-        
-        int date = consol.nextInt();
-        System.out.println("date = " + date);
-        FilterMusic Filtro = new FilterMusic();
-        List<Album> Listfiltrada = Filtro.FilterYear(listMusic, date);
-
-        for (int i = 0; i < Listfiltrada.size(); i++) {
-            System.out.println(Listfiltrada.get(i).Title);
-        }
-       
+                             1984""");
+          int date = consol.nextInt();
+          FilterMusic Filtro = new FilterMusic();
+          List<Album> Listfiltrada = Filtro.FilterYear(Ve, date);
+          
+          for(int i = 0; i<Listfiltrada.size();i++){
+              System.out.println(Listfiltrada.get(i).Title);
+          }
+          
+          FilterMusic a = new FilterMusic();
+          List<Album> LIstaFIltrada = a.FilterYearDuration(Ve);
+          for(int i =0; i<LIstaFIltrada.size();i++){
+              System.out.println(LIstaFIltrada.get(i).Date);
+          }
+          
     }
 }
