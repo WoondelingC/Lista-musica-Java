@@ -2,7 +2,6 @@ package music.list;
 
 import java.util.ArrayList;
 import java.util.List;
-
 /**
  *
  * @author Yorman Colina
@@ -14,22 +13,20 @@ public class FilterMusic implements IMusic {
  * una vez termine de recorrerlo va hacer una comparacion de lista en la posicion i con el parametro
  * Genero ignorandome los mayusculas y minisculas una vez la comparacion sea verdadera mostrara
  * mostrara todos los albunes del genero comparado 
- * @param lista
  * @param Gender
  * @return 
  */
     @Override
-    public List<Album> FilterGenre(Album[] lista, String Gender) {
-        List<Album> ot = new ArrayList();
+    public List<Album> FilterGenre(ArrayList<Album> musicList, String Gender) {
+        List<Album> ox = new ArrayList();
         
-        for(int i = 0; i < lista.length; i++){
-        
-            if (lista[i].Gender.equalsIgnoreCase(Gender)) {
-                ot.add(lista[i]);
+        for (int i=0; i < musicList.size(); i++) {
+            if (musicList.get(i).Gender.contentEquals(Gender)) {
+                ox.add((Album) musicList.get(i));
             }
         }
         
-        return ot;
+        return ox;
     }
     
     /**
@@ -37,49 +34,42 @@ public class FilterMusic implements IMusic {
  * llamamos Album como vector luego se crea un for el cual me va recorrer el vector Album
  * una vez termine de recorrerlo va hacer una comparacion de lista en la posicion i con el parametro
  * Fecha una vez la comparacion sea verdadera mostrara mostrara todos los albunes del año comparado 
- * @param lista
- * @param Date
+ * @param date
  * @return 
  */
 
     @Override
-    public List<Album> FilterYear(Album[] lista,int Date) {
+    public List<Album> FilterYear(ArrayList<Album> musicList,int date) {
     
            List<Album> ot = new ArrayList();
         
-        for(int i = 0; i < lista.length; i++){
+        for(int i = 0; i < musicList.size(); i++){
         
-            if (lista[i].Date == Date) {
-                ot.add(lista[i]);
+            if (musicList.get(i).Date == date) {
+               ot.add((Album) musicList.get(i));
             }
         }
         
         return ot; 
     }    
 
+    /**
+     * 
+     * @param musicList 
+     */
     @Override
-    public List<Album> FilterYearDuration(Album[] lista) {
-        List<Album> ot = new ArrayList();
-        
-        for(int i = 0; i<(lista.length-1);i--){
-            for(int j = 0;j<(lista.length-1);i++){
-                if(lista[j].Date > lista[j+1].Date){
-                    Album aux = lista[j];
-                    lista[j] = lista[j+1];
-                    lista[j+1] = aux;
-                    System.out.println(aux);
-//                    for(int k = 0; k<lista.length;k++){
-//                        System.out.println(lista[k].Title);
-//                    }
+    public void FilterYearDuration(ArrayList<Album> musicList){
+        for(int i=0;i<musicList.size();i++){
+            Album temporal;
+            for(int j=i+1; j < musicList.size(); j++){
+                if(musicList.get(i).Date > musicList.get(j).Date){
+                temporal=musicList.get(j);
+                musicList.set(j,musicList.get(i));
+                musicList.set(i,temporal);
                 }
             }
         }
-        
-//        for(int i = 0; i<lista.length; i++){
-//            if((lista[i].Date == Date) && (lista[i].Duration == Duration)){
-//                ot.add(lista[i]);
-//            }
-//        }
-        return ot;
     }
 }
+        
+

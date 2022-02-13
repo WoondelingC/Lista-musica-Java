@@ -4,6 +4,7 @@
  */
 package music.list;
 
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -14,25 +15,24 @@ public interface IMusic {
     /**
      * Creamos el metodo Arreglo FiltrarGenero en el cual ponemos como parametros
      * Genero y el arreglo Album Lista para asi ser sobrescrito en las clases que necesiten el metodo
-     * @param list
+     * @param musicList
      * @param Gender
      * @return 
      */
-    public List<Album> FilterGenre(Album[] list, String Gender);
+    public List<Album> FilterGenre(ArrayList<Album> musicList, String Gender);
     /**
      * Creamos el metodo Arreglo FiltrarAño en el cual ponemos como parametros
      * Fecha y y el arreglo Album Lista para asi ser sobrescrito en las clases que necesiten el metodo
-     * @param list
+     * @param musicList
      * @param Date
      * @return 
      */
-    public List<Album> FilterYear(Album[] list,int Date);
+    public List<Album> FilterYear(ArrayList<Album> musicList,int Date);
     /**
      * Creamos el metodo Arreglo FiltrarAñoDuracion en el cual ponemos como parametros
      * el arreglo Album Lista para asi ser sobrescrito en las clases que necesiten el metodo
-     * @param list
-     * @return 
+     * @param musicList
      */
-    public List<Album> FilterYearDuration(Album[] list);
+    public void FilterYearDuration(ArrayList<Album> musicList);
     
 }
