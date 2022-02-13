@@ -12,8 +12,10 @@ import java.util.List;
  */
 public interface IMusic {
     
-    public List<Album> FilterGenre(Album[] lista, String genero);
+    public List<Album> FilterGenre(List<Album> list, String genero);
     
-    public List<Album> FilterYear(Album[] lista);
+    public List<Album> FilterYear(List<Album> list, int date);
+    
+    //public List<Album> FilterYearDuration(List<Album> list);
     
 }

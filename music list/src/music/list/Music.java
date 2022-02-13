@@ -1,6 +1,5 @@
 package music.list;
 
-import java.util.List;
 
 /**
  *
@@ -9,15 +8,15 @@ import java.util.List;
 public abstract class Music {
     
     public String Title;
-    public String Date;
-    public float Duration;
+    public int date;
+    public int Duration;
     public String Gender;
     public String portada;
     public String Description;
 
-    public Music(String Title, String Date, float Duration, String Gender, String Cover, String Description) {
+    public Music(String Title, Integer date, int Duration, String Gender, String Cover, String Description) {
         this.Title = Title;
-        this.Date = Date;
+        this.date = date;
         this.Duration = Duration;
         this.Gender = Gender;
         this.portada = Cover;
@@ -26,7 +25,7 @@ public abstract class Music {
     
     public Music(){
         Title = "";
-        Date = "";
+        date = 0;
         Duration = 0;
         Gender = "";
         portada = "";
@@ -41,19 +40,19 @@ public abstract class Music {
         this.Title = Title;
     }
 
-    public String getDate() {
-        return Date;
+    public Integer getDate() {
+        return this.date;
     }
 
-    public void setDate(String Date) {
-        this.Date = Date;
+    public void setDate(int Date) {
+        this.date = date;
     }
 
     public float getDuration() {
         return Duration;
     }
 
-    public void setDuration(float Duration) {
+    public void setDuration(int Duration) {
         this.Duration = Duration;
     }
 
@@ -83,11 +82,10 @@ public abstract class Music {
     
     public abstract void createPlaylist();
     
-    public abstract void sortList();
 
     @Override
     public String toString() {
-        return "Music{" + "Title=" + Title + ", Date=" + Date + ", Duration=" + 
+        return "Music{" + "Title=" + Title + ", Date=" + date + ", Duration=" + 
                 Duration + ", Gender=" + Gender + ", portada=" + portada + 
                 ", Description=" + Description + '}';
     }

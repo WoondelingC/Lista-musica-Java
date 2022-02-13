@@ -1,43 +1,35 @@
 package music.list;
 
-import java.util.List;
-
 /**
  *
  * @author jonat
  */
-public class Album extends Music {
+public class Album extends Music implements Comparable<Album> {
     
     static int musicCounter = 0;
     
-    private int idMusic;
+    private static int idMusic;
     //private String[] list = new Arraylist();
 
-    public Album(String Title, String Date, float Duration, String Gender, String portada, String Description) {
-        super(Title, Date, Duration, Gender, portada, Description);
+    public Album(String Title, Integer date, int Duration, String Gender, String portada, String Description) {
+        super(Title, date, Duration, Gender, portada, Description);
         
-        this.idMusic = ++ Album.musicCounter;
-    }
-
-    
-    public String getTitle(){
-        return this.Title;
+        idMusic = ++ Album.musicCounter;
     }
 
     public int getidMusic() {
         return idMusic;
     }    
-    
-   
-
-    @Override
-    public void sortList() {
-        System.out.println("como vas");
-    }
-
 
     @Override
     public void createPlaylist() {
+        
+    }
+
+    @Override
+    public int compareTo(Album o) {
+        
+        return date;
         
     }
     
