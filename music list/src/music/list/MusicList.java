@@ -30,7 +30,7 @@ public class MusicList {
         while (x < 9) {
             if (x < 9) {
                 for (int i = 0; i < listCompleted.size(); i++) {
-                    System.out.println(i+1 + " " + listCompleted.get(i).Title);
+                    System.out.println(i+1  + " " + listCompleted.get(i).Title);
                 }
             }
 

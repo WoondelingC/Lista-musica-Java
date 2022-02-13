@@ -60,12 +60,12 @@ public class FilterMusic implements IMusic {
     @Override
     public void FilterYearDuration(ArrayList<Album> musicList){
         for(int i=0;i<musicList.size();i++){
-            Album temporal;
+            Album aux;
             for(int j=i+1; j < musicList.size(); j++){
                 if(musicList.get(i).Date > musicList.get(j).Date){
-                temporal=musicList.get(j);
+                aux=musicList.get(j);
                 musicList.set(j,musicList.get(i));
-                musicList.set(i,temporal);
+                musicList.set(i,aux);
                 }
             }
         }
