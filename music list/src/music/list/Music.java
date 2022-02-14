@@ -1,141 +1,219 @@
 package music.list;
 
 /**
- *
- * @author jonat
- */
+* [Detalle el objetivo de la clase.
+*
+* incorpore indicaciones de uso de la clase para facilitar su compresión.
+* ej.:
+*
+* EstaClase clase = new EstaClase(arg, arg1, ..., argN);
+* clase.setUnaPropiedad(valor);
+* ValorDeRespuesta valor = clase.execute();
+* ]
+*
+* @version 01-01-01 2022-02-12 
+* 
+* @author Jose Colina josecolinamartinez@gmail.com
+*
+* @since 01
+*/
 public abstract class Music {
     /**
-     * 
+     * Declaración de atributos
      */
-    public String Title;
-    public int Date;
-    public int Duration;
-    public String Gender;
+    public String title;
+    public int date;
+    public int duration;
+    public String gender;
     public String portada;
-    public String Description;
+    public String description;
 
     /**
-     * 
-     * @param Title
-     * @param Date
-     * @param Duration
-     * @param Gender
-     * @param Cover
-     * @param Description 
+     * Constructor de la clase abstracta
+     * @param title
+     * @param date
+     * @param duration
+     * @param gender
+     * @param portada
+     * @param description 
      */
-    public Music(String Title, int Date, int Duration, String Gender, String Cover, String Description) {
-        this.Title = Title;
-        this.Date = Date;
-        this.Duration = Duration;
-        this.Gender = Gender;
-        this.portada = Cover;
-        this.Description = Description;
+    public Music(String title, int date, int duration, String gender, String portada, String description) {
+        this.title = title;
+        this.date = date;
+        this.duration = duration;
+        this.gender = gender;
+        this.portada = portada;
+        this.description = description;
     }
     /**
-     * 
+     * Contructor con los parametros inicializados
      */
     public Music(){
-        Title = "";
-        Date = 0;
-        Duration = 0;
-        Gender = "";
+        title = "";
+        date = 0;
+        duration = 0;
+        gender = "";
         portada = "";
-        Description = "";
+        description = "";
     }
     /**
-     * 
-     * @return 
-     */
+    * Metodo creado con el fin de obtener el titulo de la musica
+    * 
+    * @return regresa el titulo
+    * @author Jose Colina josecolinamartinez@gmail.com
+    *
+    * @since 01
+    */
     public String getTitle() {
-        return Title;
+        return title;
     }
+    
     /**
-     * 
-     * @param Title 
-     */
-    public void setTitle(String Title) {
-        this.Title = Title;
+    * Metodo creado con el fin de modificar el titulo de la musica
+    * 
+    * @param title
+    * @author Jose Colina josecolinamartinez@gmail.com
+    * 
+    * @since 01
+    */
+    public void setTitle(String title) {
+        this.title = title;
     }
+    
     /**
-     * 
-     * @return 
-     */
+    * Metodo creado con el fin de obtener la fecha de la musica
+    * 
+    * @return regresa la fecha
+    * @author Jose Colina josecolinamartinez@gmail.com
+    *
+    * @since 01
+    */
     public int getDate() {
-        return Date;
+        return date;
     }
+    
     /**
-     * 
-     * @param Date 
-     */
-    public void setDate(int Date) {
-        this.Date = Date;
+    * Metodo creado con el fin de modificar la fecha de la musica
+    * 
+    * @param date
+    * @author Jose Colina josecolinamartinez@gmail.com
+    *
+    * @since 01
+    */
+    public void setDate(int date) {
+        this.date = date;
     }
+    
     /**
-     * 
-     * @return 
-     */
+    * Metodo creado con el fin de obtener la duración de la musica
+    * 
+    * @return regresa el la duración
+    * @author Jose Colina josecolinamartinez@gmail.com
+    *
+    * @since 01
+    */
     public float getDuration() {
-        return Duration;
+        return duration;
     }
+    
     /**
-     * 
-     * @param Duration 
-     */
-    public void setDuration(int Duration) {
-        this.Duration = Duration;
+    * Metodo creado con el fin de modificar la duración de la musica
+    * 
+    * @param duration
+    * @author Jose Colina josecolinamartinez@gmail.com
+    *
+    * @since 01
+    */
+    public void setDuration(int duration) {
+        this.duration = duration;
     }
+    
     /**
-     * 
-     * @return 
-     */
+    * Metodo creado con el fin de obtener el genero de la musica
+    * 
+    * @return regresa el genero
+    * @author Jose Colina josecolinamartinez@gmail.com
+    *
+    * @since 01
+    */
     public String getGender() {
-        return Gender;
+        return gender;
     }
+    
     /**
-     * 
-     * @param Gender 
-     */
-    public void setGender(String Gender) {
-        this.Gender = Gender;
+    * Metodo creado con el fin de modificar el genero de la musica
+    * 
+    * @param gender
+    * @author Jose Colina josecolinamartinez@gmail.com
+    *
+    * @since 01
+    */
+    public void setGender(String gender) {
+        this.gender = gender;
     }
+    
     /**
-     * 
-     * @return 
-     */
+    * Metodo creado con el fin de obtener la portada de la musica
+    * 
+    * @return regresa la portada
+    * @author Jose Colina josecolinamartinez@gmail.com
+    *
+    * @since 01
+    */
     public String getCover() {
         return portada;
     }
+    
     /**
-     * 
-     * @param Cover 
-     */
-    public void setCover(String Cover) {
-        this.portada = Cover;
+    * Metodo creado con el fin de modificar la portada de la musica
+    * 
+    * @param portada
+    * @author Jose Colina josecolinamartinez@gmail.com
+    *
+    * @since 01
+    */
+    public void setCover(String portada) {
+        this.portada = portada;
     }
+    
     /**
-     * 
-     * @return 
-     */
+    * Metodo creado con el fin de mostrar la informacion de las muscias
+    * de manera mas clara
+    * 
+    * @return devuelve la descripcion de la musica
+    * @author Jose Colina josecolinamartinez@gmail.com
+    *
+    * @since 01
+    */
     public String getDescription() {
-        return Description;
+        return description;
     }
+    
     /**
-     * 
-     * @param Description 
-     */
-    public void setDescription(String Description) {
-        this.Description = Description;
+    * Metodo creado con el fin de modificar la descripcion de la musica
+    * 
+    * @param description
+    * @author Jose Colina josecolinamartinez@gmail.com
+    *
+    * @since 01
+    */
+    public void setDescription(String description) {
+        this.description = description;
     }
+    
     /**
-     * 
-     * @return 
-     */
+    * Metodo creado con el fin de mostrar la informacion de las muscias
+    * de manera mas clara
+    * 
+    * @author Jose Colina josecolinamartinez@gmail.com
+    *
+    * @since 01
+    */
     @Override
     public String toString() {
-        return "Music{" + "Title=" + Title + ", Date=" + Date + ", Duration=" + 
-                Duration + ", Gender=" + Gender + ", portada=" + portada + 
-                ", Description=" + Description + '}';
+        return "Music{" + "Title=" + title + ", Date=" + date + ", Duration=" + 
+                duration + ", Gender=" + gender + ", portada=" + portada + 
+                ", Description=" + description + '}';
     }
     
 }

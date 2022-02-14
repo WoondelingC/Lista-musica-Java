@@ -1,38 +1,49 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package music.list;
 
 import java.util.ArrayList;
 import java.util.List;
 
-/**
- *
- * @author Yorman Colina
- */
+
 public interface IMusic {
     /**
-     * Creamos el metodo Arreglo FiltrarGenero en el cual ponemos como parametros
-     * Genero y el arreglo Album Lista para asi ser sobrescrito en las clases que necesiten el metodo
-     * @param musicList
-     * @param Gender
-     * @return 
-     */
-    public List<Album> FilterGenre(ArrayList<Album> musicList, String Gender);
+    * Detalle el objetivo del método.Metodo creado con el fin de recorrer el ArrayList musicList, 
+      obtener los datos del mismo y filtrarlos mediante su genero
+      y agregar y mostrar una nueva lista con las canciones 
+      dependiendo de la opcion ingresada por el usuario
+    *
+    * @param musicList lista principal de canciones
+    * @param genders generos 
+    * @return regresa la lista filtrada
+    * @author Jose Colina josecolinamartinez@gmail.com
+    * 
+    * @since 01    
+    */
+    public List<Album> FilterGenre(ArrayList<Album> musicList, String genders);
+    
     /**
-     * Creamos el metodo Arreglo FiltrarAño en el cual ponemos como parametros
-     * Fecha y y el arreglo Album Lista para asi ser sobrescrito en las clases que necesiten el metodo
-     * @param musicList
-     * @param Date
-     * @return 
-     */
-    public List<Album> FilterYear(ArrayList<Album> musicList,int Date);
+    * Metodo creado con el fin de recorrer el ArrayList musicList, 
+      obtener los datos del mismo y filtrarlos mediante su fecha
+      y agregar y mostrar una nueva lista con las canciones 
+      dependiendo de la opcion ingresada por el usuario
+    *
+    * @param musicList lista principal de canciones
+    * @param date fecha 
+    * @return regresa la lista filtrada
+    * @author Jose Colina josecolinamartinez@gmail.com
+    *
+    * @since 01    
+    */
+    public List<Album> FilterYear(ArrayList<Album> musicList,int date);
+    
     /**
-     * Creamos el metodo Arreglo FiltrarAñoDuracion en el cual ponemos como parametros
-     * el arreglo Album Lista para asi ser sobrescrito en las clases que necesiten el metodo
-     * @param musicList
-     */
+    * Metodo creado con el fin de recorrer el ArrayList musicList, 
+      obtener los datos del mismo de manera ordenada por fecha y duracion
+    *
+    * @param musicList lista principal de canciones
+    * @author Jose Colina josecolinamartinez@gmail.com
+    *
+    * @since 01    
+    */
     public void FilterYearDuration(ArrayList<Album> musicList);
     
 }

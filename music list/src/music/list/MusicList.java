@@ -7,30 +7,46 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
+
 /**
- *
- * @author Jose Colina, Jonathan Brito
- */
+* [Detalle el objetivo de la clase.
+* El objetivo principal de la clase es llamar los metodos de las otras clases,
+* permitir crear instancias de las clases y ejecutar el programa para comprobar
+* su funcionalida
+* ]
+*
+* @version 01-01-01 2022-02-12 
+* 
+* @author Jose Colina josecolinamartinez@gmail.com
+*
+* @since 01
+*/
+
 public class MusicList {
 
-    /**
-     * metodo usado para recorrer la lista de musica principal y validar las
-     * musicas que quiera agregar el usuarip
-     *
-     * @param listCompleted lista de musica principal
-     */
+/**
+* [Detalle el objetivo del método.
+* Metodo creado con el fin de recorrer el ArrayList, obtener los datos del mismo
+* y agregar una cancion dependiendo de la opcion ingresada por el usuario
+* ]
+*
+* @param listCompleted contiene la informacion del ArrayList
+*
+* @author Jose Colina josecolinamartinez@gmail.com
+*
+* @since 01
+*
+*/
+
     static void listOption(List<Album> listCompleted) {
 
         int x = 0;
         ArrayList list = new ArrayList();
 
-        /**
-         *
-         */
         while (x < 9) {
             if (x < 9) {
                 for (int i = 0; i < listCompleted.size(); i++) {
-                    System.out.println(i+1  + " " + listCompleted.get(i).Title);
+                    System.out.println(i+1  + " " + listCompleted.get(i).title);
                 }
             }
 
@@ -41,31 +57,31 @@ public class MusicList {
 
             switch (x) {
                 case 1 -> {
-                    list.add(listCompleted.get(0).Title);
+                    list.add(listCompleted.get(0).title);
                 }
                 case 2 -> {
-                    list.add(listCompleted.get(1).Title);
+                    list.add(listCompleted.get(1).title);
                 }
                 case 3 -> {
-                    list.add(listCompleted.get(2).Title);
+                    list.add(listCompleted.get(2).title);
                 }
                 case 4 -> {
-                    list.add(listCompleted.get(3).Title);
+                    list.add(listCompleted.get(3).title);
                 }
                 case 5 -> {
-                    list.add(listCompleted.get(4).Title);
+                    list.add(listCompleted.get(4).title);
                 }
                 case 6 -> {
-                    list.add(listCompleted.get(5).Title);
+                    list.add(listCompleted.get(5).title);
                 }
                 case 7 -> {
-                    list.add(listCompleted.get(6).Title);
+                    list.add(listCompleted.get(6).title);
                 }
                 case 8 -> {
-                    list.add(listCompleted.get(7).Title);
+                    list.add(listCompleted.get(7).title);
                 }
                 case 9 -> {
-                    list.add(listCompleted.get(8).Title);
+                    list.add(listCompleted.get(8).title);
                 }
 
                 default ->
@@ -118,19 +134,13 @@ public class MusicList {
         musicList.add(music9);
         
         /**
-         * 
+         * metodo creado en FilterMusic
          */
         FilterMusic a = new FilterMusic();
         a.FilterYearDuration(musicList);
         
-        /**
-         * 
-         */
         listOption(musicList);
-        
-        /**
-         * 
-         */
+       
         Scanner consol = new Scanner(System.in);
         System.out.println("""
                              Que Genero deseas ver 
@@ -138,16 +148,16 @@ public class MusicList {
                              Salsa 
                              Ranchera""");
 
-        String generos = consol.nextLine();
+        String genders = consol.nextLine();
 
         FilterMusic filtro = new FilterMusic();
-        List<Album> listaFiltrada = filtro.FilterGenre(musicList, generos);
+        List<Album> listaFiltrada = filtro.FilterGenre(musicList, genders);
 
         for (int i = 0; i < listaFiltrada.size(); i++) {
-            System.out.println(listaFiltrada.get(i).Title);
+            System.out.println(listaFiltrada.get(i).title);
         }
         /**
-         * 
+         * pregunta al usuario mediante la consola
          */
         System.out.println("""
                              De cual año deseas ver los Albunes 
@@ -160,17 +170,16 @@ public class MusicList {
                              2002
                              2013
                              2019""");
-        /**
-         * 
-         */
+      
         int date = consol.nextInt();
         FilterMusic Filtro = new FilterMusic();
         List<Album> Listfiltrada = Filtro.FilterYear(musicList, date);
         /**
-         * 
+         * ciclo para recorrer la lista filtrada y mostrar el titulo de
+         * las musicas
          */
         for (int i = 0; i < Listfiltrada.size(); i++) {
-            System.out.println(Listfiltrada.get(i).Title);
+            System.out.println(Listfiltrada.get(i).title);
         }
     }
 }
